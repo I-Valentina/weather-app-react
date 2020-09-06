@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  color: #dc3545;
+  color: #2e2627;
   font-size: 28px;
   font-weight: 300;
   line-height: 28px;
@@ -93,4 +93,35 @@ li:first-letter {
 
 .textdeco {
   font-weight: bold;
+}
+
+.NextForecast {
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #48484a;
+}
+
+.NextForecast h3 {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-top: 7px;
+}
+
+.NextForecast img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
+}
+
+.NextForecast p {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
 }
