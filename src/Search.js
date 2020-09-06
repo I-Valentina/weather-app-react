@@ -18,6 +18,7 @@ export default function Search() {
         <div className="col-1">
           <span className="current-location">
             <button type="button" className="btn btn-light w-600">
+              <span />
               🎯
             </button>
           </span>
