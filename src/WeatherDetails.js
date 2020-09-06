@@ -12,32 +12,37 @@ export default function WeatherDetails() {
 
   return (
     <div>
-      <div className="float-right">
-        <ul className="details">
-          <li>
-            Sunset <span className="textdeco">{weatherData.sunset}</span>
-          </li>
-          <li>
-            Humidity <span className="textdeco">{weatherData.humidity}%</span>{" "}
-          </li>
-          <li>
-            Pressure <span className="textdeco">{weatherData.pressure}hPA</span>{" "}
-          </li>
-        </ul>
+      <div className="row">
+        <div className="col-3">
+          <ul className="details">
+            <li>
+              Sunset <span className="textdeco">{weatherData.sunset}</span>
+            </li>
+            <li>
+              Humidity <span className="textdeco">{weatherData.humidity}%</span>{" "}
+            </li>
+            <li>
+              Pressure{" "}
+              <span className="textdeco">{weatherData.pressure}hPA</span>{" "}
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="float-right">
-        <ul className="details">
-          <li>
-            Sunrise <span className="textdeco">{weatherData.sunrise}</span>
-          </li>
-          <li>
-            Wind <span className="textdeco">{weatherData.wind}km/h</span>{" "}
-          </li>
-          <li>
-            Visibility{" "}
-            <span className="textdeco">{weatherData.visibility}km</span>{" "}
-          </li>
-        </ul>
+      <div className="row">
+        <div className="col-3">
+          <ul className="details">
+            <li>
+              Sunrise <span className="textdeco">{weatherData.sunrise}</span>
+            </li>
+            <li>
+              Wind <span className="textdeco">{weatherData.wind}km/h</span>{" "}
+            </li>
+            <li>
+              Visibility{" "}
+              <span className="textdeco">{weatherData.visibility}km</span>{" "}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
