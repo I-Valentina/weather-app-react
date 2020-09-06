@@ -1,16 +1,22 @@
 import React from "react";
-import logo from "./logo.svg";
+import Search from "./Search.js";
+import ForecastToday from "./ForecastToday";
+import ForecastOverview from "./ForecastOverview";
+import WeatherDetails from "./WeatherDetails";
+
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h3> Hello from Romania</h3>
-      </header>
+      <div className="container-frame">
+        <div className="container-header">
+          <Search />
+          <ForecastOverview />
+          <ForecastToday />
+          <WeatherDetails />
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
