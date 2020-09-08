@@ -6,11 +6,19 @@ export default function Footer() {
       <small>
         <a
           href="https://github.com/I-Valentina/weather-app-react"
-          target=" blank"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           Open-source code
         </a>{" "}
-        by Ioana Valentina Adamović
+        by{" "}
+        <a
+          href="linkedin.com/in/adamović-ioana-valentina-b06259198"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Ioana Valentina Adamović
+        </a>
       </small>
     </div>
   );
