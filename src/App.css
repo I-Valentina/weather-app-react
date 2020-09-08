@@ -15,9 +15,11 @@ ul {
   padding: 0;
 }
 
-.container-frame {
+.container {
   max-width: 600px;
   margin: 30px auto;
+  border: 1px solid #dadde1;
+  border-radius: 10px;
   background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
 
@@ -36,9 +38,7 @@ li:first-letter {
 }
 
 .container-header {
-  padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 10px;
+  padding: 15px;
 }
 
 .current-location {
@@ -93,37 +93,6 @@ li:first-letter {
 
 .textdeco {
   font-weight: bold;
-}
-
-.NextForecast {
-  margin-top: 10px;
-  margin-left: 10px;
-  color: #48484a;
-}
-
-.NextForecast h3 {
-  font-size: 14px;
-  font-weight: 400;
-  text-align: center;
-  height: 15px;
-  line-height: 15px;
-  padding-top: 7px;
-}
-
-.NextForecast img {
-  display: block;
-  margin: 0 auto;
-  height: 48px;
-  width: 48px;
-}
-
-.NextForecast p {
-  text-align: center;
-  font-size: 13px;
-  font-weight: 400;
-  height: auto;
-  line-height: 15px;
-  white-space: nowrap;
 }
 
 .Footer {

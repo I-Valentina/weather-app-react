@@ -1,8 +1,9 @@
 import React from "react";
 import Search from "./Search.js";
 import ForecastToday from "./ForecastToday";
-import ForecastOverview from "./ForecastOverview";
-import WeatherDetails from "./WeatherDetails";
+import ForecastHeader from "./ForecastHeader";
+import ForecastDetails from "./ForecastDetails";
+import UpcomingForecast from "./UpcomingForecast";
 import Footer from "./Footer";
 
 import "./App.css";
@@ -10,12 +11,13 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <div className="container-frame">
+      <div className="container">
         <div className="container-header">
           <Search />
-          <ForecastOverview />
+          <ForecastHeader />
           <ForecastToday />
-          <WeatherDetails />
+          <ForecastDetails />
+          <UpcomingForecast />
           <Footer />
         </div>
       </div>

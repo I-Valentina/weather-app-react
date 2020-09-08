@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ForecastOverview() {
+export default function ForecastHeader() {
   let weatherData = {
     city: "Cluj-Napoca",
     date: "Sunday, 13:02",
