@@ -1,7 +1,3 @@
-body {
-  font-family: arial, monospace;
-}
-
 h1 {
   color: #c82333;
   font-size: 28px;
@@ -96,9 +92,10 @@ li:first-letter {
 }
 
 .Footer {
-  margin: 0;
+  margin: 5px 0;
+  font-size: 15px;
   padding: 0;
-  margin-top: 15px;
   font-style: italic;
   color: #48484a;
+  float: left;
 }

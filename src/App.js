@@ -18,8 +18,8 @@ export default function App() {
           <ForecastToday />
           <ForecastDetails />
           <UpcomingForecast />
-          <Footer />
         </div>
+        <Footer />
       </div>
     </div>
   );
