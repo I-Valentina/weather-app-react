@@ -4,7 +4,7 @@ import UpcomingForecast from "./UpcomingForecast";
 
 import axios from "axios";
 
-export default function Forecast() {
+export default function Forecast(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
@@ -15,7 +15,7 @@ export default function Forecast() {
       date: "Sunday, 13:02",
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
-      temperature: response.data.main.temp,
+      temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       sunrise: "06:26",
@@ -42,7 +42,7 @@ export default function Forecast() {
 
   if (weatherData.ready) {
     return (
-      <div className="Forecast">
+      <div className="container-header">
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-8">
