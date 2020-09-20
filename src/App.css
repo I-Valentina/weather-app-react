@@ -60,7 +60,7 @@ li:first-letter {
   color: #48484a;
 }
 
-.weather-forecast .units {
+.weather-forecast .unit {
   position: relative;
   font-size: 16px;
   top: -34px;

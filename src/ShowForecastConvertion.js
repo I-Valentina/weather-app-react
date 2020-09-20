@@ -18,7 +18,7 @@ export default function ShowForecastConvertion(props) {
 
   if (unit === "celsius") {
     return (
-      <div>
+      <div className="weather-forecast">
         <strong id="temperature">{Math.round(props.celsius)}</strong>
         <span className="unit">
           °C |{" "}
@@ -30,8 +30,8 @@ export default function ShowForecastConvertion(props) {
     );
   } else {
     return (
-      <div>
-        <span>{Math.round(fahrenheit())}</span>
+      <div className="weather-forecast">
+        <strong id="temperature">{Math.round(fahrenheit())}</strong>
         <span className="unit">
           <a href="/" className="active" onClick={showCelsius}>
             °C
