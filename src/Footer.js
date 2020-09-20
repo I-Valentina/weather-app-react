@@ -13,7 +13,7 @@ export default function Footer() {
         </a>{" "}
         on GitHub made by{" "}
         <a
-          href="linkedin.com/in/adamović-ioana-valentina-b06259198"
+          href="https://linkedin.com/in/adamović-ioana-valentina-b06259198"
           rel="noopener noreferrer"
           target="_blank"
         >
