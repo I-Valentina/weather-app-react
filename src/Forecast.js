@@ -9,6 +9,7 @@ export default function Forecast(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -18,11 +19,27 @@ export default function Forecast(props) {
       temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      sunrise: "06:26",
-      sunset: "20:38",
-      visibility: "12,9",
-      pressure: 1013,
+      sunrise: formatHours(response.data.sys.sunrise * 1000),
+      sunset: formatHours(response.data.sys.sunset * 1000),
+      visibility: response.data.visibility / 1000,
+      pressure: response.data.main.pressure,
     });
+  }
+
+  function formatHours(timestamp) {
+    let date = new Date(timestamp);
+    let hours = date.getHours();
+
+    if (hours < 10) {
+      hours = `0${hours}`;
+    }
+
+    let minutes = date.getMinutes();
+    if (minutes < 10) {
+      minutes = `0${minutes}`;
+    }
+
+    return `${hours}:${minutes}`;
   }
 
   function handleSubmit(event) {
