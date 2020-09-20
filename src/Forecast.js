@@ -8,7 +8,7 @@ export default function Forecast(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
-  function handleResponse(response) {
+  function showTemperature(response) {
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -53,7 +53,19 @@ export default function Forecast(props) {
   function search() {
     const apiKey = "468138c56dce4362024186bb0e3443ca";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(showTemperature);
+  }
+
+  function searchLocation(position) {
+    let apiKey = "468138c56dce4362024186bb0e3443ca";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(showTemperature);
+  }
+
+  function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
   }
 
   if (weatherData.ready) {
@@ -80,7 +92,11 @@ export default function Forecast(props) {
             </div>
             <div className="col-1">
               <span className="current-location">
-                <button type="button" className="btn btn-light w-600">
+                <button
+                  type="button"
+                  className="btn btn-light w-600"
+                  onClick={getCurrentLocation}
+                >
                   <span />
                   🎯
                 </button>
