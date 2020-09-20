@@ -11,7 +11,7 @@ export default function Footer() {
         >
           Open-source code
         </a>{" "}
-        by{" "}
+        on GitHub made by{" "}
         <a
           href="linkedin.com/in/adamović-ioana-valentina-b06259198"
           rel="noopener noreferrer"

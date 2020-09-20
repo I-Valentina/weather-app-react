@@ -1,4 +1,9 @@
 .UpcomingForecast {
   margin-top: 10px;
   color: #48484a;
+  font-size: 13px;
+}
+
+.Icon {
+  margin-left: -10px;
 }

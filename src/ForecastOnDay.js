@@ -16,8 +16,10 @@ export default function ForecastOnDay(props) {
 
   return (
     <div className="col">
-      {hours()}
-      <ForecastIcon code={props.data.weather[0].icon} />
+      <strong>{hours()} </strong>
+      <div className="Icon">
+        <ForecastIcon code={props.data.weather[0].icon} />
+      </div>
       <strong>{temperature()}</strong>
     </div>
   );
