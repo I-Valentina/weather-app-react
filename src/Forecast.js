@@ -41,12 +41,12 @@ export default function Forecast(props) {
     return `${hours}:${minutes}`;
   }
 
-  function handleSubmit(event) {
+  function showSubmit(event) {
     event.preventDefault();
     search();
   }
 
-  function handleCityChange(event) {
+  function showCity(event) {
     setCity(event.target.value);
   }
 
@@ -71,7 +71,7 @@ export default function Forecast(props) {
   if (weatherData.ready) {
     return (
       <div className="container-header">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={showSubmit}>
           <div className="row">
             <div className="col-8">
               <input
@@ -80,7 +80,7 @@ export default function Forecast(props) {
                 placeholder="🔍Search location ..."
                 autocomplete="off"
                 autoFocus="on"
-                onChange={handleCityChange}
+                onChange={showCity}
               />
             </div>
             <div className="col-3">
