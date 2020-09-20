@@ -1,6 +1,7 @@
 import React from "react";
 import ForecastIcon from "./ForecastIcon";
 import FormatDate from "./FormatDate";
+import ShowForecastConvertion from "./ShowForecastConvertion";
 
 export default function ForecastToday(props) {
   return (
@@ -24,13 +25,7 @@ export default function ForecastToday(props) {
               <ForecastIcon code={props.data.icon} />
             </div>
             <div className="float-left">
-              <strong id="temperature">{props.data.temperature}</strong>
-              <span className="units">
-                <a href="/" className="active">
-                  °C
-                </a>{" "}
-                |<a href="/">°F</a>
-              </span>
+              <ShowForecastConvertion celsius={props.data.temperature} />
             </div>
           </div>
         </div>
