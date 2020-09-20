@@ -1,5 +1,6 @@
 import React from "react";
 import ForecastIcon from "./ForecastIcon";
+import FormatDate from "./FormatDate";
 
 export default function ForecastToday(props) {
   return (
@@ -7,7 +8,9 @@ export default function ForecastToday(props) {
       <h1>{props.data.city}</h1>
       <ul>
         <li className="descriptiondate">
-          <span>{props.data.date}</span>
+          <span>
+            <FormatDate date={props.data.date} />
+          </span>
         </li>
         <li className="descriptiondate">
           <em>{props.data.description}</em>

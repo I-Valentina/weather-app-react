@@ -12,7 +12,7 @@ export default function Forecast(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: "Sunday, 13:02",
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       temperature: Math.round(response.data.main.temp),
